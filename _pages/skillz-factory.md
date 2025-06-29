@@ -66,7 +66,7 @@ author_profile: true
 
   <div class="cta-section" style="text-align: center; padding: 2em 0;">
     <p style="font-size: 1.1em;">Seats are limited to ensure personalized mentorship. Register your interest now to be considered for the inaugural cohort.</p>
-    <a href="YOUR_GOOGLE_FORM_LINK_HERE" class="btn btn--success btn--lg" target="_blank" rel="noopener noreferrer">Register Your Interest Now</a>
+    <a href="https://forms.gle/X21sXtrHdmBnFi6JA" class="btn btn--success btn--lg" target="_blank" rel="noopener noreferrer">Register Your Interest Now</a>
   </div>
 
 </div>
