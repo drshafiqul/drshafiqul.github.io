@@ -2,11 +2,10 @@
 layout: single
 permalink: /skillz-factory/
 author_profile: true
-title: "SkillZ Factory"
 ---
 
 <div style="text-align: center; padding: 2em 0; border-bottom: 1px solid #eee;">
-  <h1 style="font-size: 2.5em;">SkillZ Factory</h1>
+  <h1 style="font-size: 2.5em;"><i class="fas fa-rocket" aria-hidden="true"></i> SkillZ Factory</h1>
   <p style="font-size: 1.2em; color: #555; max-width: 800px; margin: auto;">
     An exclusive training platform designed to equip Bangladeshi students with the elite research skills needed to succeed in top US universities.
   </p>
@@ -67,7 +66,7 @@ title: "SkillZ Factory"
 
   <div class="cta-section" style="text-align: center; padding: 2em 0;">
     <p style="font-size: 1.1em;">Seats are limited to ensure personalized mentorship. Register your interest now to be considered for the inaugural cohort.</p>
-    <a href="https://forms.gle/tKZpHHbFekBdCAxT8" class="btn btn--success btn--lg" target="_blank" rel="noopener noreferrer">Register Your Interest Now</a>
+    <a href="YOUR_GOOGLE_FORM_LINK_HERE" class="btn btn--success btn--lg" target="_blank" rel="noopener noreferrer">Register Your Interest Now</a>
   </div>
 
 </div>
