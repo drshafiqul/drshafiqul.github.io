@@ -27,7 +27,7 @@ Here is a visual timeline highlighting key milestones in my academic and profess
       <p>Teaching foundational and advanced courses in accounting, finance, and data analytics. Developed new curriculum for Machine Learning & AI for Accounting, earning consistently high student evaluation ratings.</p>
     </div>
     <div class="timeline-image">
-      <img src="/assets/images/timeline/EWU1.jpg" alt="Teaching at East West University">
+      <img src="/assets/images/timeline/BGS2.jpg" alt="Teaching at East West University">
     </div>
   </div>
 
