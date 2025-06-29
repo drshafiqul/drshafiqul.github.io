@@ -5,14 +5,11 @@ permalink: /publications/
 author_profile: true
 ---
 
-{% if author.googlescholar %}
-  You can also find my articles on <u><a href="{{author.googlescholar}}">my Google Scholar profile</a>.</u>
-{% endif %}
+{% assign publications_by_year = site.publications | group_by_exp: "post", "post.date | date: '%Y'" | reverse %}
 
-{% include base_path %}
-
-{% for post in site.publications reversed %}
-  {% include archive-single.html %}
+{% for year in publications_by_year %}
+  <h2 id="{{ year.name }}" class="archive__subtitle">{{ year.name }}</h2>
+  {% for post in year.items %}
+    {% include archive-single.html %}
+  {% endfor %}
 {% endfor %}
-
-<sup>*</sup> Equal authorship

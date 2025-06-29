@@ -1,40 +1,43 @@
 ---
-permalink: /teaching/
 title: "Teaching"
+layout: single
+permalink: /teaching/
+author_profile: true
 ---
 
-Research plays a central role in my teaching as students improve their
-analytical skills and master the tools of data analysis through hands-on
-experience. I have taught undergraduate courses on political violence and
-statistical methodology. While at UNC, I taught the graduate statistics lab for
-Advanced Topics in Political Data Science, where my work was recognized by the
-Political Science Department's Earle Wallace Award for Graduate Student
-Teaching. I also served as a teaching assistant for courses in international
-relations and American politics at UNC, in addition to the ICPSR Summer Program
-where I was a teaching assistant for a course on Bayesian modeling in the social
-sciences. I am also a
-[certified instructor](https://carpentries.org/instructors/#jayrobwilliams) with
-[The Carpentries](https://carpentries.org/), which develops evidence-based
-methods for teaching "essential data and computational skills for conducting
-efficient, open, and reproducible research."
+### My Teaching Philosophy
 
+My approach to teaching is rooted in the belief that the most effective learning happens at the intersection of theory and practice. In my courses, I strive to demystify complex topics in accounting and finance by grounding them in real-world data and hands-on analytical exercises. I design my curriculum to empower students not just with established knowledge, but with the critical data literacy and machine learning skills necessary to ask new questions and solve the challenges of a data-rich world. My goal is to foster an environment of intellectual curiosity where students develop the confidence to become analytical, evidence-based thinkers.
 
-You can view my teaching portfolio [here](/files/pdf/teaching/Portfolio.pdf).
-You can find a selection of my teaching materials, including all of the labs
-from Advanced Topics in Political Data Science, [here](/teaching-materials).
+---
 
-## Washington University in St. Louis
-- Pol Sci 3090: The Scientific Study of Civil War (Spring 2020)
-    - [Syllabus](/files/pdf/teaching/PS 3090 Syllabus.pdf)
-- Pol Sci 3171: International Conflict Management & Resolution (Fall 2019)
-    - [Syllabus](/files/pdf/teaching/PS 3171 Syllabus.pdf)
+## Graduate Courses
+*MSc in Data Science and Analytics Program*
 
-## The University of North Carolina at Chapel Hill
-- Poli 281: Quantitative Research in Political Science (Spring 2019)
-    - [Syllabus](/files/pdf/teaching/POLI 281 Syllabus.pdf)
-- Poli 891: Lab for Advanced Topics in Political Data Science (Fall 2017, Fall 2018)
-    - [Syllabus](/files/pdf/teaching/POLI 891 Syllabus.pdf)
+<div class="course-card">
+  <h3>DSA 5045: Machine Learning for Finance</h3>
+  <p>This flagship course provides a comprehensive introduction to machine learning models and their application to financial data. Students learn the entire data science pipeline, from data wrangling and feature engineering to model evaluation and interpretation, using Python libraries like Scikit-learn and TensorFlow to solve real-world problems in areas such as credit scoring, fraud detection, and algorithmic trading.</p>
+  <a href="/files/syllabi/DSA5045.pdf" class="btn btn--info" target="_blank" rel="noopener noreferrer">View Syllabus</a>
+  <p style="font-size: 0.9em; color: #666; margin-top: 1em;"><em>*Exemplary student projects will be featured here at the end of the semester.</em></p>
+</div>
 
-## ICPSR Summer Program
-- Introduction to Applied Bayesian Modeling (Summer 2017)
-    - [Syllabus](/files/pdf/teaching/bayes2017.pdf)
+<div class="course-card">
+  <h3>DSA 5047: Data Analytics for Finance</h3>
+  <p>This course focuses on the tools and techniques for extracting actionable insights from financial and alternative datasets. Students work with SQL, Python (Pandas, Matplotlib), and data visualization tools like Tableau to analyze capital market data, build financial models, and effectively communicate their findings. The curriculum emphasizes a case-based approach to data-driven decision making.</p>
+  <a href="/files/syllabi/DSA5047.pdf" class="btn btn--info" target="_blank" rel="noopener noreferrer">View Syllabus</a>
+  <p style="font-size: 0.9em; color: #666; margin-top: 1em;"><em>*Exemplary student projects will be featured here at the end of the semester.</em></p>
+</div>
+
+---
+
+## Undergraduate Courses Taught
+*Department of Business Administration*
+
+<ul class="course-list">
+  <li>ACT 430: Accounting Information Systems <span class="rating-badge">4.8 / 5.0</span></li>
+  <li>BUS 231: Business Communication</li>
+  <li>ACT 411: Intermediate Accounting I</li>
+  <li>ACT 201: Managerial Accounting <span class="rating-badge">4.7 / 5.0</span></li>
+  <li>ACT 101: Financial Accounting <span class="rating-badge">4.8 / 5.0</span></li>
+  <li>BUS 101: Introduction to Business <span class="rating-badge">4.9 / 5.0</span></li>
+</ul>

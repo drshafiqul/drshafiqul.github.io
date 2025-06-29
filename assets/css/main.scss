@@ -1,23 +1,23 @@
 ---
+# This front matter is essential for Jekyll to process the file.
 ---
 
 /*
- *    Minimal Mistakes Jekyll Theme
+ * Minimal Mistakes Jekyll Theme
  *
- *  - Michael Rose
- *  - mademistakes.com
- *  - https://twitter.com/mmistakes
+ * - Michael Rose
+ * - mademistakes.com
+ * - https://twitter.com/mmistakes
  *
 */
 
-@import "vendor/breakpoint/breakpoint"; // media query mixins
+/* 2. Theme's own SCSS components - DO NOT CHANGE THIS ORDER */
+@import "vendor/breakpoint/breakpoint";
 @import "variables";
 @import "mixins";
 @import "vendor/susy/susy";
-
 @import "reset";
 @import "base";
-
 @import "utilities";
 @import "animations";
 @import "tables";
@@ -27,17 +27,498 @@
 @import "navigation";
 @import "footer";
 @import "syntax";
-
 @import "forms";
-
 @import "page";
 @import "archive";
 @import "sidebar";
-
 @import "vendor/font-awesome/fontawesome";
 @import "vendor/font-awesome/solid";
 @import "vendor/font-awesome/brands";
 @import "vendor/magnific-popup/magnific-popup";
 @import "print";
-
 @import "custom";
+
+
+/* --- 3. ALL YOUR CUSTOM STYLES GO AT THE VERY END --- */
+
+/* Style for Publication Titles */
+.archive__item .archive__item-title a {
+  text-decoration: none;
+}
+
+.archive__item .archive__item-title a:hover {
+  text-decoration: underline;
+}
+
+/* Style for the container of the icon-only buttons */
+.publication-icons .btn {
+  background: transparent !important; /* Make background transparent */
+  border: none !important;            /* Remove all borders */
+  padding: 0 10px 0 0 !important;    /* Adjust spacing (right padding) */
+  box-shadow: none !important;         /* Remove shadow effect */
+  text-decoration: none !important;    /* Remove underline */
+}
+
+/* Style for the actual icons inside the buttons */
+.publication-icons .btn .fas {
+  color: #0056b3; /* A professional, academic blue */
+  font-size: 1.4em; /* Make icons a bit larger to be easily clickable */
+  transition: transform 0.2s ease-in-out; /* Add a smooth animation effect */
+}
+
+/* Add a subtle 'grow' effect when hovering over an icon */
+.publication-icons .btn:hover .fas {
+  transform: scale(1.2);
+}
+
+/* Style for the Google Scholar button to contain the badge */
+.scholar-btn {
+  position: relative; /* This is required for positioning the badge */
+}
+
+/* Innovative Citation Count Badge */
+.citation-badge {
+  position: absolute; /* Position the badge relative to the icon button */
+  top: -5px;
+  right: 0;
+  background-color: #d9534f; /* A contrasting red color */
+  color: white;
+  border-radius: 50%; /* Makes the badge a perfect circle */
+  padding: 2px 5px;
+  font-size: 0.65rem; /* Use a small, crisp font size */
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; /* Use a standard UI font for numbers */
+  line-height: 1;
+  font-weight: bold;
+  pointer-events: none; /* Prevents the badge from interfering with clicks on the icon */
+}
+
+/* --- Custom Font Size for Publication Excerpts --- */
+
+.archive__item .archive__item-excerpt {
+  font-size: 1.05em; /* Increases font size by 5% from the base */
+  line-height: 1.6; /* Improves readability with more space between lines */
+}
+
+/* --- Make Publication Titles Larger --- */
+
+.archive__item-title {
+  font-size: 1.25em; /* Default is 1.125em. Adjust as you like! */
+}
+
+/* --- Custom Styles for New Publication List Layout --- */
+
+/* Style for the main citation entry */
+.archive__item-citation {
+  margin-bottom: 1.5em; /* Adds space between each publication entry */
+  line-height: 1.5;
+  font-size: 1.05em;
+}
+
+/* Style for the [PDF] [DOI] links */
+.publication-links {
+  display: inline-block;
+  margin-left: 0.5em;
+  font-size: 0.9em; /* Make the links slightly smaller */
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; /* Use a standard UI font */
+}
+
+.publication-links a {
+  text-decoration: none; /* Remove underline from links */
+}
+
+.publication-links a:hover {
+  text-decoration: underline; /* Add underline back on hover */
+}
+
+/* --- Custom Styles for In-Page Navigation Pane --- */
+
+.in-page-nav {
+  float: right;
+  width: 260px;
+  margin-left: 2em;
+  margin-bottom: 1.5em;
+  padding: 1em;
+  background: #f9f9f9;
+  border: 1px solid #e8e8e8;
+  border-radius: 5px;
+  font-size: 0.9em;
+}
+
+.in-page-nav strong {
+  display: block;
+  margin-bottom: 0.75em;
+  font-weight: bold;
+}
+
+.in-page-nav ul {
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: 0;
+}
+
+.in-page-nav li {
+  margin-bottom: 0.5em;
+}
+
+/* Clear the float on mobile to prevent awkward layout */
+@media screen and (max-width: 768px) {
+  .in-page-nav {
+    float: none;
+    width: auto;
+    margin-left: 0;
+  }
+}
+
+/* --- Custom Style for "Explore Research" Link --- */
+
+.learn-more-link {
+  display: inline-block;
+  padding: 0.3em 0.8em; /* Creates the pill shape */
+  margin-top: 1em;
+  font-size: 0.85em;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  color: #0056b3; /* Blue text color */
+  background-color: #e7f1ff; /* A very light blue background */
+  border: 1px solid #c0d8ff; /* A slightly darker blue border */
+  border-radius: 2em; /* This makes the corners fully rounded */
+  text-decoration: none;
+  transition: all 0.2s ease-in-out; /* Smooth transition for hover effects */
+}
+
+/* Style for the arrow icon inside the link */
+.learn-more-link .fas {
+  margin-left: 0.5em;
+}
+
+/* Hover effect: background gets darker, text becomes white */
+.learn-more-link:hover {
+  background-color: #0056b3; /* The main blue color */
+  color: #ffffff; /* White text */
+  text-decoration: none;
+  transform: translateY(-2px); /* A subtle lift effect */
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* A subtle shadow for depth */
+}
+
+/* --- Custom Styles for Swiper.js Carousel --- */
+
+/* Import Swiper's base styles */
+@import url('https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css');
+
+/* Style the main carousel container */
+.featured-papers-carousel {
+  width: 100%;
+  height: 400px; /* Adjust height as needed */
+  margin-top: 2em;
+  padding-bottom: 2.5em; /* Space for pagination dots */
+}
+
+/* Style each individual slide */
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  overflow: hidden; /* Ensures image corners are rounded */
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.swiper-slide:hover {
+  transform: translateY(-5px); /* Add a lift effect on hover */
+}
+
+/* Style the image inside the slide */
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* This makes the image cover the slide area nicely */
+}
+
+/* Style for the caption text over the slide */
+.swiper-slide-caption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.6); /* Semi-transparent black background */
+  color: #fff;
+  padding: 10px;
+  font-size: 0.8em;
+  text-align: left;
+}
+
+/* Style the navigation arrows to match your theme */
+.swiper-button-next, .swiper-button-prev {
+  color: #0056b3 !important; /* Use your theme's blue color */
+}
+
+/* Style the pagination dots */
+.swiper-pagination-bullet-active {
+  background: #0056b3 !important; /* Use your theme's blue color */
+}
+
+/* --- Custom Styles for Teaching Page --- */
+
+/* Style for the graduate course "cards" */
+.course-card {
+  border: 1px solid #e8e8e8;
+  border-left: 5px solid #0056b3; /* Blue accent border */
+  padding: 1.5em;
+  margin-bottom: 2em;
+  border-radius: 5px;
+  background: #fdfdfd;
+}
+
+.course-card h3 {
+  margin-top: 0;
+  border-bottom: none; /* Remove default heading border */
+}
+
+/* Style for the undergraduate course list */
+.course-list {
+  list-style: none;
+  padding-left: 0;
+}
+
+.course-list li {
+  font-size: 1.1em;
+  padding: 0.75em 0;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+/* Style for the minimalist rating badge */
+.rating-badge {
+  display: inline-block;
+  margin-left: 1em;
+  padding: 0.2em 0.6em;
+  font-size: 0.8rem;
+  font-weight: bold;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  color: #555;
+  background-color: #f0f0f0;
+  border-radius: 2em; /* Makes it a pill shape */
+}
+
+/* --- Custom Styles for SkillZ Factory Landing Page --- */
+
+/* Hero Section with Logo */
+.skillz-hero {
+  text-align: center;
+  padding: 2em 0;
+  border-bottom: 1px solid #f0f0f0;
+}
+.skillz-logo .fas {
+  font-size: 3em;
+  color: #0056b3;
+  margin-bottom: 0.25em;
+}
+.skillz-hero h1 {
+  font-size: 3.5em;
+  font-weight: bold;
+}
+.skillz-subtitle {
+  font-size: 1.2em;
+  color: #555;
+  max-width: 800px;
+  margin: 1em auto 2em;
+}
+
+/* Facts Section */
+.facts-section {
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+  margin: 2.5em 0;
+  gap: 1em;
+}
+.fact-card {
+  flex-basis: 30%;
+}
+.fact-number {
+  font-size: 2.5em;
+  font-weight: bold;
+  color: #0056b3;
+}
+.fact-text {
+  font-size: 0.9em;
+  color: #666;
+}
+
+/* Course Highlight Box */
+.course-highlight-box {
+  background: #e7f1ff;
+  border: 1px solid #c0d8ff;
+  border-left: 5px solid #0056b3;
+  padding: 1.5em 2em;
+  margin: 2.5em 0;
+  border-radius: 5px;
+}
+.course-highlight-box h2 {
+  margin-top: 0;
+  border-bottom: none;
+}
+
+/* Centered Heading */
+.text-center {
+  text-align: center;
+}
+
+/* NEW: Dynamic Syllabus Table */
+.syllabus-table-wrapper {
+  margin: 2em 0;
+  overflow-x: auto; /* For responsiveness on small screens */
+}
+.syllabus-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.95em;
+}
+.syllabus-table th, .syllabus-table td {
+  padding: 1em;
+  text-align: left;
+  border-bottom: 1px solid #e8e8e8;
+}
+.syllabus-table th {
+  background-color: #f9f9f9;
+  font-weight: bold;
+}
+.syllabus-table tbody tr {
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+.syllabus-table tbody tr:hover {
+  background-color: #ffffff;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+  transform: scale(1.01); /* A very subtle lift effect */
+}
+
+/* Unique Selling Proposition Section */
+.usp-section {
+  text-align: center;
+  padding: 2em 1em;
+  background-color: #f9f9f9;
+  border-radius: 5px;
+  margin: 2.5em 0;
+}
+.usp-section h2 {
+  margin-top: 0;
+}
+
+/* Call to Action Section */
+.cta-section {
+  text-align: center;
+  padding: 2em 0;
+  border-top: 1px solid #f0f0f0;
+}
+.cta-section p {
+  margin-bottom: 1.5em;
+}
+
+/* --- Custom Styles for Achievement Timeline --- */
+
+.timeline {
+  position: relative;
+  max-width: 900px;
+  margin: 2em auto;
+  padding: 2em 0;
+}
+
+/* The central vertical line */
+.timeline::after {
+  content: '';
+  position: absolute;
+  width: 6px;
+  background-color: #0056b3; /* Your theme's blue */
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  margin-left: -3px;
+  border-radius: 3px;
+}
+
+/* The container for each event */
+.timeline-item {
+  padding: 10px 40px;
+  position: relative;
+  background-color: inherit;
+  width: 50%;
+}
+
+/* Position items on the left */
+.timeline-item:nth-child(odd) {
+  left: 0;
+  text-align: right;
+}
+
+/* Position items on the right */
+.timeline-item:nth-child(even) {
+  left: 50%;
+}
+
+/* The circle on the timeline */
+.timeline-item::after {
+  content: '';
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  right: -17px;
+  background-color: white;
+  border: 4px solid #0056b3;
+  top: 30px;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+.timeline-item:nth-child(even)::after {
+  left: -16px;
+}
+
+/* The content box */
+.timeline-content {
+  padding: 20px 30px;
+  background-color: white;
+  position: relative;
+  border-radius: 6px;
+  border: 1px solid #e8e8e8;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+}
+.timeline-date {
+  font-weight: bold;
+  color: #0056b3;
+  margin-bottom: 10px;
+  display: block;
+}
+.timeline-content h2 {
+  margin-top: 0;
+  font-size: 1.5em;
+}
+
+.timeline-image {
+  margin-top: 15px;
+}
+.timeline-image img {
+  max-width: 100%;
+  border-radius: 6px;
+}
+
+/* Responsive styles for mobile */
+@media screen and (max-width: 768px) {
+  .timeline::after {
+    left: 31px;
+  }
+  .timeline-item {
+    width: 100%;
+    padding-left: 70px;
+    padding-right: 25px;
+    text-align: left !important;
+  }
+  .timeline-item::after {
+    left: 15px;
+  }
+  .timeline-item:nth-child(even) {
+    left: 0%;
+  }
+}

@@ -1,6 +1,6 @@
 ---
 permalink: /
-title: "About me"
+title: "About Me"
 excerpt: "About me"
 author_profile: true
 redirect_from: 
@@ -8,21 +8,64 @@ redirect_from:
   - /about.html
 ---
 
-Welcome! I am a data scientist applying machine learning tools and causal
-inference techniques to remote sensing data. I am an affiliated
-researcher with the [Data-driven Analysis of Peace Project](https://dapp-lab.org)
-and a research collaborator with the 
-[Research on International Policy Implementation Lab](https://bridgingthegapproject.org/ripil).
+Welcome! I am a Fulbright Scholar applying machine learning tools and data analytics techniques to the domain of accounting and finance. I am a senior lecturer at the [East West University, Bangladesh.](https://fbe.ewubd.edu/business-administration/faculty-view/shafiqul) where I teach DSA 5045: Machine Learning for Finance, DSA 5047: Data Analytics for Finance at the MSc in [Data Science and Analytics program.](https://ewubd.edu/single-programs/5) 
 
-I earned my PhD in Political Science from the
-[University *of* North Carolina *at* Chapel Hill](https://www.unc.edu) and my
-BA in Political Science from [Haverford College](https://www.haverford.edu).
-My academic work has been [published](publications) in the
-*American Political Science Review*, *International Studies Quarterly*,
-*Conflict Management and Peace Science*, and
-*Political Science Research and Methods*, among other outlets. This
-[research](research) explores the causes and consequences of political violence
-using a broad variety of methods such as latent variable models, geospatial
-analysis, and big data. I have [taught](teaching) quantitative methodology and
-international relations, and am a certified instructor with
-[The Carpentries](https://carpentries.org).
+I earned my MSc in Accounting and Analytics from the [Rochester Institute *of* Technology](https://www.rit.edu) and my MBA and BBA in Accounting & Information Systems from [University of Dhaka](https://www.du.ac.bd). My academic work has been [published](/publications) in the *Asian Journal of Accounting Research*, *International Journal of Disclosure and Governance*, *International Journal of Sustainability in Higher Education*, and *Economics Bulletin*, among other outlets. My [research](/research) explores application of machine learning to analyze unstructured data from platforms such as social media, and company websites, and to see how this modern information environment creates new challenges and opportunities for corporate transparency and impacts capital market efficiency. I have [taught](/teaching) undergraduate level accounting and finance, and am a certified data analyst from [Google](https://www.coursera.org/account/accomplishments/professional-cert/AP6JRF9L57KY).
+
+---
+
+<h2 id="featured-papers">Featured Research Papers</h2>
+
+<div class="swiper featured-papers-carousel">
+  <div class="swiper-wrapper">
+    {% for post in site.publications %}
+      {% if post.cover_image %}
+        <div class="swiper-slide">
+          <a href="{{ post.url | relative_url }}">
+            <img src="{{ post.cover_image | relative_url }}" alt="{{ post.title }}">
+            <div class="swiper-slide-caption">{{ post.short_title }}</div>
+          </a>
+        </div>
+      {% endif %}
+    {% endfor %}
+  </div>
+  <div class="swiper-pagination"></div>
+
+  <div class="swiper-button-prev"></div>
+  <div class="swiper-button-next"></div>
+</div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const swiper = new Swiper('.featured-papers-carousel', {
+      // Optional parameters
+      loop: true,
+      slidesPerView: 1,
+      spaceBetween: 30,
+      breakpoints: {
+        // when window width is >= 640px
+        640: {
+          slidesPerView: 2,
+          spaceBetween: 20
+        },
+        // when window width is >= 1024px
+        960: {
+          slidesPerView: 3,
+          spaceBetween: 30
+        }
+      },
+
+      // If we need pagination
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+
+      // Navigation arrows
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+    });
+  });
+</script>

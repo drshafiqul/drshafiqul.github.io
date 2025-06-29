@@ -9,11 +9,24 @@ main:
   - title: "Teaching"
     url: /teaching/
 
-  - title: "Software"
-    url: /software/
+  - title: "SkillZ Factory"
+    url: /skillz-factory/
 
-  - title: "Posts"
-    url: /posts/
+  - title: "My Journey"
+    url: /journey/
     
   - title: "CV"
     url: /cv/
+
+# _data/navigation.yml
+
+# research sidebar
+research:
+  - title: "Research Program"
+    url: "#research-program"
+  - title: "Corporate Reporting"
+    url: "#corporate-reporting--disclosure-quality"
+  - title: "Capital Markets"
+    url: "#capital-markets--corporate-governance"
+  - title: "Future Agenda"
+    url: "#future-research-ai--unstructured-data"
