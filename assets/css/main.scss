@@ -519,3 +519,40 @@
     left: 0%;
   }
 }
+
+/* --- Custom: Responsive Two-Column Layout --- */
+
+/* 1. This is the container for our columns */
+.responsive-two-column {
+  display: flex;          /* Use Flexbox to align items side-by-side */
+  align-items: center;    /* Vertically center the content in both columns */
+  gap: 2em;               /* Creates a nice space between the two columns */
+  margin-top: 2em;        /* Adds some space above this new section */
+  margin-bottom: 2em;     /* Adds some space below this new section */
+}
+
+/* 2. This styles the left column (text) */
+.column-text {
+  flex: 2; /* This makes the text column take up twice as much space as the image column */
+}
+
+/* 3. This styles the right column (image) */
+.column-image {
+  flex: 1; /* This makes the image column take up 1 part of the available space */
+}
+
+.column-image img {
+  width: 100%;      /* Makes the image fill its column */
+  border-radius: 8px; /* Adds slightly rounded corners to the image */
+}
+
+
+/* 4. THE MEDIA QUERY - This is where the mobile magic happens */
+@media screen and (max-width: 768px) {
+
+  .responsive-two-column {
+    /* On mobile, change the direction from horizontal (row) to vertical (column) */
+    flex-direction: column;
+  }
+
+}
