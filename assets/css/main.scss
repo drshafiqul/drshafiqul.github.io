@@ -576,3 +576,25 @@
   width: 100%;
   height: 100%;
 }
+
+/* --- Custom Style for Lively Page Background --- */
+.page-background-wrapper {
+  background-image: linear-gradient(to bottom, #ffffff, #f7fdfc, #ffffff);
+}
+
+/* --- Custom Animation for Urgency Box --- */
+@keyframes pulse-glow {
+  0% {
+    box-shadow: 0 0 5px #ffeaca;
+  }
+  50% {
+    box-shadow: 0 0 20px 5px #ffc107;
+  }
+  100% {
+    box-shadow: 0 0 5px #ffeaca;
+  }
+}
+
+.urgency-box-animated {
+  animation: pulse-glow 2.5s ease-in-out infinite;
+}
