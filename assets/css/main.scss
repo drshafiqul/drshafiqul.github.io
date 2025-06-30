@@ -582,16 +582,16 @@
   background-image: linear-gradient(to bottom, #ffffff, #f7fdfc, #ffffff);
 }
 
-/* --- Custom Animation for Urgency Box --- */
+/* --- Custom Animation for Highlighting Boxes --- */
 @keyframes pulse-glow {
   0% {
-    box-shadow: 0 0 5px #ffeaca;
+    box-shadow: 0 0 4px rgba(255, 193, 7, 0.4);
   }
   50% {
-    box-shadow: 0 0 20px 5px #ffc107;
+    box-shadow: 0 0 20px 8px rgba(255, 193, 7, 0.7);
   }
   100% {
-    box-shadow: 0 0 5px #ffeaca;
+    box-shadow: 0 0 4px rgba(255, 193, 7, 0.4);
   }
 }
 
