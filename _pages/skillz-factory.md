@@ -73,6 +73,7 @@ author_profile: false
 </div>
 
 
+<<<<<<< HEAD
 <h2 style="text-align: center; margin-bottom: 1.5em; font-size: 2em;">From Foundation to Publication: A World-Class Curriculum</h2>
 <div class="syllabus-table-wrapper">
   <table class="syllabus-table">
@@ -105,5 +106,11 @@ author_profile: false
   <h4>What if I miss a live class?</h4>
   <p>All live sessions will be recorded and made available exclusively to cohort members within 24 hours, so you'll never miss an opportunity to learn.</p>
 </div>
+=======
+  <div class="cta-section" style="text-align: center; padding: 2em 0;">
+    <p style="font-size: 1.1em;">Seats are limited to ensure personalized mentorship. Register your interest now to be considered for the inaugural cohort.</p>
+    <a href="https://forms.gle/X21sXtrHdmBnFi6JA" class="btn btn--success btn--lg" target="_blank" rel="noopener noreferrer">Register Your Interest Now</a>
+  </div>
+>>>>>>> db6e93cf968c8f8abde17ea60a30a5cde2778fdc
 
 </div>
