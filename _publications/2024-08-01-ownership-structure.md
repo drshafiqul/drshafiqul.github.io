@@ -15,5 +15,5 @@ paperurl: '/files/pdf/research/Ownership_structure.pdf'
 link: 'https://doi.org/10.1057/s41310-024-00257-0'
 gscholar_id: 'https://scholar.google.com/citations?view_op=view_citation&hl=en&user=3-AfcGcAAAAJ&sortby=pubdate&citation_for_view=3-AfcGcAAAAJ:kNdYIx-mwKoC'
 gscholar_citations: '1'
-citation: 'Khan, L., Saha, A.K., Kamal, Y. & Islam, M. S. (2024). &quot;Do ownership structure and board composition matter in firm performance? Regulatory influence in developing economy.&quot; <i>International Journal of Disclosure and Governance</i>.'
+citation: 'Khan, I., Saha, A.K., Kamal, Y. & Islam, M. S. (2024). &quot;Do ownership structure and board composition matter in firm performance? Regulatory influence in developing economy.&quot; <i>International Journal of Disclosure and Governance</i>.'
 ---
