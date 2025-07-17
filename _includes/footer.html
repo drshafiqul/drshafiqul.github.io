@@ -1,0 +1,50 @@
+{% include base_path %}
+
+<!--
+  This style block contains the CSS to format the logos in the footer.
+  - .page__footer-logos: Creates a flexible container to center and space out the logos.
+  - .page__footer-logos img: Sets a consistent height, adds a grayscale filter, and a hover effect.
+-->
+<style>
+  .page__footer-logos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem; /* Adjust the space between logos */
+    padding: 0.75rem 0; /* Reduced padding to make the footer less tall */
+    flex-wrap: wrap;
+  }
+
+  .page__footer-logos img {
+    height: 28px; /* Adjust the height of the logos */
+    max-width: 120px;
+    object-fit: contain;
+    filter: grayscale(100%);
+    opacity: 0.65;
+    transition: all 0.2s ease-in-out;
+  }
+
+  .page__footer-logos a:hover img {
+    filter: grayscale(0%);
+    opacity: 1;
+  }
+</style>
+
+<!-- This div contains the logos and their links. Make sure the image filenames match what you upload. -->
+<div class="page__footer-logos">
+  <a href="https://us.fulbrightonline.org/" target="_blank" rel="noopener noreferrer" title="Fulbright Program">
+    <img src="{{ base_path }}/assets/images/logos/fulbright.svg" alt="Fulbright Program Logo">
+  </a>
+  <a href="https://www.rit.edu/" target="_blank" rel="noopener noreferrer" title="Rochester Institute of Technology">
+    <img src="{{ base_path }}/assets/images/logos/rit.svg" alt="Rochester Institute of Technology Logo">
+  </a>
+  <a href="https://www.du.ac.bd/" target="_blank" rel="noopener noreferrer" title="University of Dhaka">
+    <img src="{{ base_path }}/assets/images/logos/du.png" alt="University of Dhaka Logo">
+  </a>
+  <a href="https://www.betagammasigma.org/" target="_blank" rel="noopener noreferrer" title="Beta Gamma Sigma">
+    <img src="{{ base_path }}/assets/images/logos/bgs.png" alt="Beta Gamma Sigma Logo">
+  </a>
+  <a href="https://www.youtube.com/@md.shafiqulislam7976" target="_blank" rel="noopener noreferrer" title="YouTube">
+    <img src="{{ base_path }}/assets/images/logos/youtube.png" alt="YouTube Logo">
+  </a>
+</div>
