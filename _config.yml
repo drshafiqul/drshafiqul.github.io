@@ -7,7 +7,7 @@
 
 # Site Settings
 locale                   : "en-US"
-title                    : "Md Shafiqul Islam"
+title                    : "About Me"
 title_separator          : "-"
 name                     : &name "Md Shafiqul Islam"
 description              : &description "Fulbright Alumnus | Machine Learning | Data Analytics | Accounting & Finance"
