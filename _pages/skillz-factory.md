@@ -22,6 +22,54 @@ author_profile: false
 </div>
 
 <!-- ======================================================================= -->
+<!-- HOT ANNOUNCEMENT BOX -->
+<!-- ======================================================================= -->
+<style>
+  .announcement-box {
+    background: linear-gradient(45deg, #ff416c, #ff4b2b);
+    color: white;
+    padding: 1.5rem;
+    border-radius: 12px;
+    text-align: center;
+    margin: 2.5em auto;
+    max-width: 800px;
+    box-shadow: 0 8px 20px rgba(255, 75, 43, 0.3);
+    border: 2px solid white;
+    animation: pulse 2s infinite;
+  }
+  .announcement-box h3 {
+    margin-top: 0;
+    font-size: 1.8rem;
+    font-weight: 700;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+    color: white; /* Ensure heading color is white */
+  }
+  .announcement-box p {
+    margin-bottom: 0;
+    font-size: 1.2rem;
+  }
+  @keyframes pulse {
+    0% {
+      transform: scale(1);
+      box-shadow: 0 8px 20px rgba(255, 75, 43, 0.3);
+    }
+    50% {
+      transform: scale(1.02);
+      box-shadow: 0 12px 30px rgba(255, 75, 43, 0.4);
+    }
+    100% {
+      transform: scale(1);
+      box-shadow: 0 8px 20px rgba(255, 75, 43, 0.3);
+    }
+  }
+</style>
+
+<div class="announcement-box">
+  <h3>🔥 Hot Announcement! 🔥</h3>
+  <p>Only 5 Seats Available, Classes Starting from August 1!</p>
+</div>
+
+<!-- ======================================================================= -->
 <!-- NEW SECTION: GLOBAL COMPETITION -->
 <!-- ======================================================================= -->
 <div style="text-align: center; padding: 3em 1em; max-width: 850px; margin: 2.5em auto;">

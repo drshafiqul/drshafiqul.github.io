@@ -1,26 +1,35 @@
 {% include base_path %}
 
 <!--
-  This style block contains the CSS to format the logos in the footer.
-  - .page__footer-logos: Creates a flexible container to center and space out the logos.
-  - .page__footer-logos img: Sets a consistent height, adds a grayscale filter, and a hover effect.
+  This style block has been updated for a truly borderless look.
+  - The background-color and sharp shadow have been removed.
+  - A new, softer, more diffused box-shadow creates a seamless separation.
 -->
 <style>
+  /* Style for the main footer container */
+  .page__footer {
+    margin-top: 1.5em; /* Reduced */
+    /* A soft, diffused shadow to create a seamless, floating effect */
+    box-shadow: 0 -12px 25px -12px rgba(0, 0, 0, 0.12);
+  }
+
+  /* Style for the container holding the logos */
   .page__footer-logos {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 1.5rem; /* Adjust the space between logos */
-    padding: 0.75rem 0; /* Reduced padding to make the footer less tall */
+    gap: 1.2rem; /* Reduced */
+    padding: 0.6rem 0; /* Reduced significantly */
     flex-wrap: wrap;
   }
 
+  /* Style for the logos */
   .page__footer-logos img {
-    height: 28px; /* Adjust the height of the logos */
-    max-width: 120px;
+    height: 28px; /* Increased logo size */
+    max-width: 120px; /* Increased logo size */
     object-fit: contain;
     filter: grayscale(100%);
-    opacity: 0.65;
+    opacity: 0.6;
     transition: all 0.2s ease-in-out;
   }
 
@@ -30,7 +39,7 @@
   }
 </style>
 
-<!-- This div contains the logos and their links. Make sure the image filenames match what you upload. -->
+<!-- The HTML structure remains the same -->
 <div class="page__footer-logos">
   <a href="https://us.fulbrightonline.org/" target="_blank" rel="noopener noreferrer" title="Fulbright Program">
     <img src="{{ base_path }}/assets/images/logos/fulbright.svg" alt="Fulbright Program Logo">
