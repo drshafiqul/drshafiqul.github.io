@@ -199,8 +199,14 @@ redirect_from:
   <!-- TYPING INTRO -->
   <!-- ======================================================================= -->
   <div class="typing-intro">
-    <h1>I am&nbsp;<div class="typing-container"><span id="identity-text"></span><span class="cursor"></span></div></h1>
-  </div>
+  <h1>
+    I am&nbsp;
+    <span class="typing-container">
+      <span id="identity-text"></span>
+      <span class="cursor"></span>
+    </span>
+  </h1>
+</div>
 
   <!-- HERO SECTION -->
   <div class="hero-section">

@@ -85,7 +85,6 @@ $(document).ready(function(){
   const textSpan = document.getElementById("identity-text");
   const cursorSpan = document.querySelector(".typing-container .cursor");
 
-  // Check if the elements exist on the page before running the script
   if (textSpan && cursorSpan) {
     const identities = ["a Fulbrighter.", "an Academic.", "a Researcher.", "a Data Scientist."];
     const typingDelay = 100;
