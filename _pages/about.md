@@ -20,13 +20,42 @@ redirect_from:
     font-family: 'Helvetica Neue', Arial, sans-serif;
   }
 
+  /* --- UPDATED: Typing Intro Section --- */
+  .typing-intro {
+    padding: 1rem 0;
+    margin-bottom: 2rem;
+    text-align: center;
+  }
+  .typing-intro h1 {
+    font-size: 2.8rem;
+    font-weight: 700;
+    color: #222;
+    margin: 0;
+    display: flex; /* Use flexbox for alignment */
+    justify-content: center;
+    align-items: center;
+  }
+  .typing-container {
+    color: #007bff;
+    display: inline-block; /* Keeps the container tight to the text */
+  }
+  .typing-container .cursor {
+    display: inline-block;
+    background-color: #007bff;
+    margin-left: 0.1rem;
+    width: 3px;
+    animation: blink 1s infinite;
+  }
+  .typing-container .cursor.typing {
+    animation: none; /* Stop blinking while typing */
+  }
+
   /* --- Hero Section --- */
   .hero-section {
     text-align: center;
     padding: 4rem 1rem;
     background-color: #f9f9f9;
     border-radius: 16px;
-    margin-top: -2em;
     margin-bottom: 3rem;
     animation: fadeInDown 0.8s ease-out;
   }
@@ -159,9 +188,19 @@ redirect_from:
     from { opacity: 0; transform: translateY(20px); }
     to { opacity: 1; transform: translateY(0); }
   }
+  @keyframes blink {
+    50% { background-color: transparent; }
+  }
 </style>
 
 <div class="about-container">
+
+  <!-- ======================================================================= -->
+  <!-- TYPING INTRO -->
+  <!-- ======================================================================= -->
+  <div class="typing-intro">
+    <h1>I am&nbsp;<div class="typing-container"><span id="identity-text"></span><span class="cursor"></span></div></h1>
+  </div>
 
   <!-- HERO SECTION -->
   <div class="hero-section">
@@ -237,3 +276,45 @@ redirect_from:
   </div>
 
 </div>
+
+<!-- JavaScript for the animated text -->
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    const textSpan = document.getElementById("identity-text");
+    const cursorSpan = document.querySelector(".typing-container .cursor");
+    const identities = ["a Fulbrighter.", "an Academic.", "a Researcher.", "a Data Scientist."];
+    const typingDelay = 100;
+    const erasingDelay = 50;
+    const newTextDelay = 2000; // Delay between current and next text
+    let textArrayIndex = 0;
+    let charIndex = 0;
+
+    function type() {
+      cursorSpan.classList.add('typing');
+      if (charIndex < identities[textArrayIndex].length) {
+        textSpan.textContent += identities[textArrayIndex].charAt(charIndex);
+        charIndex++;
+        setTimeout(type, typingDelay);
+      } else {
+        cursorSpan.classList.remove('typing');
+        setTimeout(erase, newTextDelay);
+      }
+    }
+
+    function erase() {
+      cursorSpan.classList.add('typing');
+      if (charIndex > 0) {
+        textSpan.textContent = identities[textArrayIndex].substring(0, charIndex - 1);
+        charIndex--;
+        setTimeout(erase, erasingDelay);
+      } else {
+        cursorSpan.classList.remove('typing');
+        textArrayIndex++;
+        if (textArrayIndex >= identities.length) textArrayIndex = 0;
+        setTimeout(type, typingDelay + 1100);
+      }
+    }
+
+    if (identities.length) setTimeout(type, newTextDelay + 250);
+  });
+</script>
