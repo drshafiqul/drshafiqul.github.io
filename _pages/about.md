@@ -19,11 +19,13 @@ redirect_from:
     max-width: 100%;
     font-family: 'Helvetica Neue', Arial, sans-serif;
   }
-
-  /* --- UPDATED: Typing Intro Section --- */
+  
+  /* ======================================================================= */
+  /* --- NEW ANIMATION STYLES: TYPING EFFECT --- */
+  /* ======================================================================= */
   .typing-intro {
     padding: 1rem 0;
-    margin-bottom: 2rem;
+    margin-top: 4rem; /* Add some space above this section */
     text-align: center;
   }
   .typing-intro h1 {
@@ -34,10 +36,11 @@ redirect_from:
     display: flex; /* Use flexbox for alignment */
     justify-content: center;
     align-items: center;
+    height: 60px; /* Set a fixed height to prevent layout shifts */
   }
   .typing-container {
     color: #007bff;
-    display: inline-block; /* Keeps the container tight to the text */
+    display: inline-block;
   }
   .typing-container .cursor {
     display: inline-block;
@@ -49,6 +52,11 @@ redirect_from:
   .typing-container .cursor.typing {
     animation: none; /* Stop blinking while typing */
   }
+  
+  @keyframes blink {
+    50% { background-color: transparent; }
+  }
+  /* ======================================================================= */
 
   /* --- Hero Section --- */
   .hero-section {
@@ -188,27 +196,10 @@ redirect_from:
     from { opacity: 0; transform: translateY(20px); }
     to { opacity: 1; transform: translateY(0); }
   }
-  @keyframes blink {
-    50% { background-color: transparent; }
-  }
 </style>
 
 <div class="about-container">
 
-  <!-- ======================================================================= -->
-  <!-- TYPING INTRO -->
-  <!-- ======================================================================= -->
-  <div class="typing-intro">
-  <h1>
-    I am&nbsp;
-    <span class="typing-container">
-      <span id="identity-text"></span>
-      <span class="cursor"></span>
-    </span>
-  </h1>
-</div>
-
-  <!-- HERO SECTION -->
   <div class="hero-section">
     <h1>Welcome!</h1>
     <p class="subtitle">
@@ -216,7 +207,6 @@ redirect_from:
     </p>
   </div>
 
-  <!-- KEY HIGHLIGHTS -->
   <div class="highlights-grid">
     <div class="highlight-card">
       <i class="fas fa-robot icon"></i>
@@ -240,7 +230,6 @@ redirect_from:
     </div>
   </div>
 
-  <!-- EDUCATION & CREDENTIALS -->
   <h2 class="section-title">Education & Credentials</h2>
   <div class="credentials-section">
     <div class="credential-item">
@@ -273,7 +262,6 @@ redirect_from:
     </div>
   </div>
 
-  <!-- VIDEO INTRODUCTION -->
   <div class="video-section">
     <h2 class="section-title">A Glimpse into My Work</h2>
     <div class="video-container">
@@ -281,4 +269,63 @@ redirect_from:
     </div>
   </div>
 
+  <div class="typing-intro">
+    <h1>
+      <span class="typing-container">
+        <span id="identity-text"></span><span class="cursor"></span>
+      </span>
+    </h1>
+  </div>
+
 </div>
+
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const words = ["A Fulbright Scholar", "An Educator", "A Data Storyteller", "A Researcher"];
+  let i = 0;
+  let j = 0;
+  let currentWord = "";
+  let isDeleting = false;
+  let isEnd = false;
+  const textElement = document.getElementById("identity-text");
+  const cursor = document.querySelector(".cursor");
+
+  function type() {
+    isEnd = false;
+    currentWord = words[i];
+    if (isDeleting) {
+      // Erase the word
+      textElement.textContent = currentWord.substring(0, j--);
+      if (j === -1) {
+        isDeleting = false;
+        i++;
+        if (i === words.length) {
+          i = 0;
+        }
+      }
+    } else {
+      // Type the word
+      textElement.textContent = currentWord.substring(0, j++);
+      if (j === currentWord.length + 1) {
+        isEnd = true;
+        isDeleting = true;
+      }
+    }
+
+    const typingSpeed = isDeleting ? 100 : 200;
+    const timeOut = isEnd ? 2000 : typingSpeed;
+
+    // Stop cursor from blinking while typing/deleting
+    if (!isEnd) {
+      cursor.classList.add('typing');
+    } else {
+      cursor.classList.remove('typing');
+    }
+
+    setTimeout(type, timeOut);
+  }
+
+  type();
+});
+</script>
