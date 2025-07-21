@@ -169,7 +169,7 @@ author_profile: false
   <h4>Is this program only for students applying to the USA?</h4>
   <p>Not at all. While the mentorship is informed by my US Fulbright experience, the research and data skills you will learn are the universal gold standard for top academic institutions worldwide, including the UK, Canada, Australia, and across Europe. The principles of strong research are global.</p>
   <h4>What are the prerequisites for this course?</h4>
-  <p>A bachelor's degree (or current enrollment in a final-year BBA/BSS program) is required. A basic understanding of statistics is helpful, but no prior programming experience is necessary. The most important prerequisite is a strong drive to succeed in international academia.</p>
+  <p>A bachelor's degree (or current enrollment) is required. A basic understanding of statistics is helpful, but no prior programming experience is necessary. The most important prerequisite is a strong drive to succeed in international academia. Your desire to do research, win a prestigious scholarship, and change your life forever is the most important prerequisite in my opinion.</p>
   <h4>What if I miss a live class?</h4>
   <p>All live sessions will be recorded and made available exclusively to cohort members within 24 hours, so you'll never miss an opportunity to learn.</p>
 </div>
