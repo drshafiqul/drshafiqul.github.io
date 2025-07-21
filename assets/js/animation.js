@@ -19,7 +19,8 @@ document.addEventListener('DOMContentLoaded', function() {
     if (isDeleting) {
       // Erase the word
       textElement.textContent = currentWord.substring(0, j--);
-      if (j === -1) {
+      if (j < 0) { // Changed from j === -1 to handle empty string case
+        j = 0; // Reset j
         isDeleting = false;
         i++;
         if (i === words.length) {
@@ -29,7 +30,7 @@ document.addEventListener('DOMContentLoaded', function() {
     } else {
       // Type the word
       textElement.textContent = currentWord.substring(0, j++);
-      if (j === currentWord.length + 1) {
+      if (j > currentWord.length) { // Changed from j === currentWord.length + 1
         isEnd = true;
         isDeleting = true;
       }

@@ -21,11 +21,11 @@ redirect_from:
   }
   
   /* ======================================================================= */
-  /* --- NEW ANIMATION STYLES: TYPING EFFECT --- */
+  /* --- NEW ANIMATION STYLES: TYPING EFFECT (UPDATED FOR PIPE CURSOR) --- */
   /* ======================================================================= */
   .typing-intro {
     padding: 1rem 0;
-    margin-top: 4rem; /* Add some space above this section */
+    margin-top: 4rem;
     text-align: center;
   }
   .typing-intro h1 {
@@ -33,7 +33,7 @@ redirect_from:
     font-weight: 700;
     color: #222;
     margin: 0;
-    display: flex; /* Use flexbox for alignment */
+    display: flex;
     justify-content: center;
     align-items: center;
     height: 60px; /* Set a fixed height to prevent layout shifts */
@@ -44,9 +44,8 @@ redirect_from:
   }
   .typing-container .cursor {
     display: inline-block;
-    background-color: #007bff;
-    margin-left: 0.1rem;
-    width: 3px;
+    color: #007bff;
+    font-weight: bold;
     animation: blink 1s infinite;
   }
   .typing-container .cursor.typing {
@@ -54,7 +53,7 @@ redirect_from:
   }
   
   @keyframes blink {
-    50% { background-color: transparent; }
+    50% { color: transparent; } /* Blinks the pipe character */
   }
   /* ======================================================================= */
 
@@ -272,9 +271,11 @@ redirect_from:
   <div class="typing-intro">
     <h1>
       <span class="typing-container">
-        <span id="identity-text"></span><span class="cursor"></span>
+        <span id="identity-text"></span><span class="cursor">|</span>
       </span>
     </h1>
   </div>
 
 </div>
+
+<script src="/assets/js/animation.js"></script>
