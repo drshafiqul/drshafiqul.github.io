@@ -9,21 +9,13 @@ redirect_from:
 ---
 
 <style>
-  /* Import the 'Lora' font from Google Fonts */
   @import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap');
 
-  /* --- HIDE DEFAULT PAGE TITLE --- */
-  .page__title {
-    display: none;
-  }
-
-  /* --- Main container for the new layout --- */
-  .about-container {
-    max-width: 100%;
-    /* The default font will be the unified one from _variables.scss */
-  }
+  /* --- General Styles --- */
+  .page__title { display: none; }
+  .about-container { max-width: 100%; }
   
-  /* --- TYPING EFFECT STYLES --- */
+  /* --- Typing Effect --- */
   .typing-intro { padding: 1rem 0; margin-top: 4rem; text-align: center; }
   .typing-intro h1 { font-size: 2.8rem; font-weight: 700; color: #222; margin: 0; display: flex; justify-content: center; align-items: center; height: 60px; }
   .typing-container { color: #007bff; display: inline-block; }
@@ -31,60 +23,29 @@ redirect_from:
   .typing-container .cursor.typing { animation: none; }
   @keyframes blink { 50% { color: transparent; } }
 
-  /* ======================================================================= */
-  /* --- REVISED HERO SECTION (NO LINE, STORY FORMAT) --- */
-  /* ======================================================================= */
-  .hero-section {
-    font-family: 'Lora', serif; /* Apply the special font here */
-    text-align: center;
-    padding: 4rem 1rem;
-    background-color: #f9f9f9;
-    border-radius: 16px;
-    margin-bottom: 3rem;
-  }
-  .hero-section h1 {
-    font-size: 2.8em;
-    font-weight: 700;
-    margin-bottom: 1.5rem; /* More space for the text */
-    color: #222;
-  }
-  .hero-section .subtitle {
-    font-size: 1.25rem;
-    color: #444;
-    max-width: 800px;
-    margin: 0 auto;
-    line-height: 1.7;
-  }
+  /* --- Hero Section --- */
+  .hero-section { font-family: 'Lora', serif; text-align: center; padding: 4rem 1rem; background-color: #f9f9f9; border-radius: 16px; margin-bottom: 3rem; }
+  .hero-section h1 { font-size: 2.8em; font-weight: 700; margin-bottom: 1.5rem; color: #222; }
+  .hero-section .subtitle { font-size: 1.25rem; color: #444; max-width: 800px; margin: 0 auto; line-height: 1.7; }
 
-  /* --- Key Highlights Section (Icon Cards) --- */
+  /* --- Highlights Section --- */
   .highlights-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 2rem; margin-bottom: 4rem; }
-  .highlight-card { background-color: #fff; border: 1px solid #e9e9e9; border-radius: 12px; padding: 2rem; text-align: center; transition: transform 0.3s ease, box-shadow 0.3s ease; animation: fadeInUp 0.7s ease-out both; }
+  .highlight-card { background-color: #fff; border: 1px solid #e9e9e9; border-radius: 12px; padding: 2rem; text-align: center; transition: transform 0.3s ease, box-shadow 0.3s ease; }
   .highlight-card:hover { transform: translateY(-6px); box-shadow: 0 12px 24px rgba(0,0,0,0.09); }
   .highlight-card .icon { font-size: 3rem; margin-bottom: 1rem; background: -webkit-linear-gradient(45deg, #007bff, #8a2be2); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
   .highlight-card h3 { font-size: 1.4rem; margin-top: 0; margin-bottom: 0.5rem; color: #333; }
   .highlight-card p { font-size: 1rem; color: #666; line-height: 1.5; }
-  .highlight-card:nth-child(1) { animation-delay: 0.1s; }
-  .highlight-card:nth-child(2) { animation-delay: 0.2s; }
-  .highlight-card:nth-child(3) { animation-delay: 0.3s; }
-  .highlight-card:nth-child(4) { animation-delay: 0.4s; }
 
-  /* --- Section Titles --- */
+  /* --- Section Titles & Other Sections --- */
   .section-title { text-align: center; font-size: 2.2rem; font-weight: 600; margin-top: 4rem; margin-bottom: 2.5rem; color: #333; }
-
-  /* --- Education & Credentials Section --- */
   .credentials-section { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; margin-bottom: 4rem; }
   .credential-item { background: #f9f9f9; border-radius: 12px; padding: 1.5rem; display: flex; align-items: center; gap: 1.5rem; }
   .credential-item .icon { font-size: 2.5rem; color: #007bff; }
   .credential-item-info h4 { margin: 0 0 0.25rem 0; font-size: 1.2rem; color: #333; }
   .credential-item-info p { margin: 0; font-size: 1rem; color: #666; }
-
-  /* --- Video Section --- */
   .video-section { margin: 4rem auto; max-width: 800px; }
   .video-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 12px; box-shadow: 0 15px 30px rgba(0,0,0,0.1); }
   .video-container iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
-
-  /* --- Keyframe Animations --- */
-  @keyframes fadeInUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
 </style>
 
 <div class="about-container">

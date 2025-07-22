@@ -8,9 +8,9 @@
 
   <div class="author__avatar">
     {% if author.avatar contains "://" %}
-    	<img src="{{ author.avatar }}" alt="{{ author.name }}">
+      <img src="{{ author.avatar }}" alt="{{ author.name }}">
     {% else %}
-    	<img src="{{ author.avatar | prepend: "/images/" | prepend: base_path }}" class="author__avatar" alt="{{ author.name }}">
+      <img src="{{ author.avatar | prepend: "/images/" | prepend: base_path }}" class="author__avatar" alt="{{ author.name }}">
     {% endif %}
   </div>
 
@@ -123,7 +123,11 @@
       {% endif %}
       {% if author.wikipedia %}
         <li><a href="https://en.wikipedia.org/wiki/User:{{ author.wikipedia }}"><i class="fab fa-fw fa-wikipedia-w" aria-hidden="true" style="padding-right: 1.5em;"></i>Wikipedia</a></li>
-{% endif %}
+      {% endif %}
+      
+      {% if author.skillz-factory %}
+        <li><a href="{{ author.skillz-factory | relative_url }}"><i class="fas fa-fw fa-rocket" aria-hidden="true" style="padding-right: 1.5em;"></i>SkillZ Factory</a></li>
+      {% endif %}
     </ul>
   </div>
 </div>

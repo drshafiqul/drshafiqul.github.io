@@ -94,34 +94,10 @@ author:
   orcid            : 
   googlescholar    : "https://scholar.google.com/citations?user=3-AfcGcAAAAJ&hl=en"
   email            : "fbsshuvo@gmail.com"
-  researchgate     :  # example: "https://www.researchgate.net/profile/yourprofile"
-  uri              :
-  bitbucket        :
-  codepen          :
-  dribbble         :
-  flickr           :
-  facebook         :
-  foursquare       :
-  github           : "profshafiq"
-  gitlab           : 
-  google_plus      :
-  keybase          :
-  instagram        :
-  impactstory      : #"https://profiles.impactstory.org/u/xxxx-xxxx-xxxx-xxxx"
-  lastfm           :
   linkedin         : "/msqi/"
-  mastodon         : 
-  pinterest        :
-  soundcloud       :
-  stackoverflow    : 
-  steam            :
-  tumblr           :
-  twitter          : 
-  vine             :
-  weibo            :
-  xing             :
-  youtube          : 
-  wikipedia        :
+  github           : "profshafiq"
+  # NEW SKILLZ FACTORY LINK
+  skillz-factory   : "/skillz-factory/"
 
 
 # Reading Files
@@ -207,7 +183,7 @@ defaults:
       read_time: true
       comments: true
       share: true
-      related: false
+      related: true
   # _pages
   - scope:
       path: ""
@@ -215,7 +191,6 @@ defaults:
     values:
       layout: single
       author_profile: true
-      related: false
   # _teaching
   - scope:
       path: ""
@@ -225,7 +200,6 @@ defaults:
       author_profile: true
       share: true
       comments: true
-      related: false
   # _publications
   - scope:
       path: ""
@@ -235,7 +209,6 @@ defaults:
       author_profile: true
       share: true
       comments: true
-      related: false
   # _research
   - scope:
       path: ""
@@ -245,7 +218,6 @@ defaults:
       author_profile: true
       share: true
       comment: true
-      related: false
   # _talks
   - scope:
       path: ""
@@ -254,7 +226,6 @@ defaults:
       layout: talk
       author_profile: true
       share: true
-      related: false
 
 # Sass/SCSS
 sass:
