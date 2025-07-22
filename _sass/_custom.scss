@@ -38,3 +38,24 @@
 .container:hover .overlay {
   opacity: 0.25;
 }
+
+/* ==========================================================================
+   GLOBAL FONT OVERRIDE (THE DEFINITIVE FIX)
+   ========================================================================== */
+
+/*
+ * This rule forces the main content of every page to use the desired sans-serif font.
+ * It targets all text elements within the .page__content wrapper.
+*/
+.page__content p,
+.page__content li,
+.page__content h1,
+.page__content h2,
+.page__content h3,
+.page__content h4,
+.page__content h5,
+.page__content h6,
+.page__content table,
+.page__content blockquote {
+  font-family: $sans-serif !important;
+}

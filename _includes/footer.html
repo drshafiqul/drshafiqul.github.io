@@ -1,12 +1,35 @@
 {% include base_path %}
 
-<!--
-  This style block has been updated for a truly borderless look.
-  - The background-color and sharp shadow have been removed.
-  - A new, softer, more diffused box-shadow creates a seamless separation.
--->
 <style>
-  /* Style for the main footer container */
+  /* --- Floating Button for SkillZ Factory --- */
+  .floating-skillz-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 10px 18px;
+    background-color: rgba(255, 255, 255, 0.8); /* Subtle, semi-transparent white */
+    color: #555;
+    border: 1px solid #ccc;
+    border-radius: 30px; /* Pill shape */
+    text-decoration: none !important; /* Ensure no underline */
+    font-size: 0.9em;
+    font-weight: bold;
+    z-index: 1000; /* Keeps it on top of other content */
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    backdrop-filter: blur(4px); /* Frosty glass effect for modern browsers */
+  }
+
+  /* --- Hover Effect for Floating Button --- */
+  .floating-skillz-btn:hover {
+    background-color: #007bff; /* The blue color you wanted */
+    color: #fff;
+    border-color: #007bff;
+    transform: translateY(-3px); /* Lifts the button slightly */
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  }
+
+  /* --- Styles for existing logo footer --- */
   .page__footer {
     margin-top: 1.5em; /* Reduced */
     /* A soft, diffused shadow to create a seamless, floating effect */
@@ -39,7 +62,10 @@
   }
 </style>
 
-<!-- The HTML structure remains the same -->
+<a href="/skillz-factory/" class="floating-skillz-btn">
+  <i class="fas fa-rocket"></i> SkillZ Factory
+</a>
+
 <div class="page__footer-logos">
   <a href="https://us.fulbrightonline.org/" target="_blank" rel="noopener noreferrer" title="Fulbright Program">
     <img src="{{ base_path }}/assets/images/logos/fulbright.svg" alt="Fulbright Program Logo">

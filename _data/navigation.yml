@@ -8,17 +8,12 @@ main:
 
   - title: "Teaching"
     url: /teaching/
-
-  - title: "SkillZ Factory"
-    url: /skillz-factory/
-
-  - title: "My Journey"
-    url: /journey/
     
   - title: "CV"
     url: /cv/
 
-# _data/navigation.yml
+  - title: "My Journey"
+    url: /journey/
 
 # research sidebar
 research:
