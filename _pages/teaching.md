@@ -154,7 +154,7 @@ author_profile: true
         <blockquote>AI will seep into all areas of the economy and society; we will expect everything to be smart.</blockquote>
         <div class="author">&mdash; Sam Altman, CEO of OpenAI</div>
         <div class="tech-logos">
-          <img src="/assets/images/logos/python.svg" alt="Python">
+          <img src="/assets/images/logos/Python.svg" alt="Python">
         </div>
       </div>
     </div>
@@ -168,7 +168,7 @@ author_profile: true
         <blockquote>A data culture... empowers every individual to do great things because of the data at their fingertips.</blockquote>
         <div class="author">&mdash; Satya Nadella, CEO of Microsoft</div>
         <div class="tech-logos">
-          <img src="/assets/images/logos/rstudio.svg" alt="RStudio">
+          <img src="/assets/images/logos/RStudio.svg" alt="RStudio">
         </div>
       </div>
     </div>
