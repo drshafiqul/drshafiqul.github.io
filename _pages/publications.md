@@ -6,84 +6,67 @@ author_profile: true
 ---
 
 <style>
-  /* --- Keyword Highlights Section --- */
-  .keyword-highlights {
-    text-align: center;
-    padding: 2rem 0;
-    margin-bottom: 2rem;
-    border-bottom: 1px solid #e9ecef;
-  }
-  .keyword-highlights h3 {
-    margin-top: 0;
-    margin-bottom: 1.5rem;
-    font-size: 1.5rem;
-    color: #333;
-  }
-  .keywords-container {
-    display: flex;
-    justify-content: center;
-    gap: 2rem;
-    flex-wrap: wrap;
-  }
-  .keyword-item {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    font-size: 0.9rem;
-    color: #555;
-    font-weight: 500;
-  }
-  .keyword-item .icon {
-    font-size: 2rem;
-    margin-bottom: 0.5rem;
-    color: #007bff;
+  /* --- HIDE THE MAIN PAGE TITLE --- */
+  .page__title {
+    display: none;
   }
 
-  /* --- Network Diagram Section --- */
-  .network-section {
-    margin-top: 4rem;
+  /* --- Keyword Highlights Section --- */
+  .keyword-highlights { text-align: center; padding: 2rem 0; margin-bottom: 2rem; border-bottom: 1px solid #e9ecef; }
+  .keyword-highlights h3 { margin-top: 0; margin-bottom: 1.5rem; font-size: 1.5rem; color: #333; }
+  .keywords-container { display: flex; justify-content: center; gap: 2rem; flex-wrap: wrap; }
+  .keyword-item { display: flex; flex-direction: column; align-items: center; font-size: 0.9rem; color: #555; font-weight: 500; }
+  .keyword-item .icon { font-size: 2rem; margin-bottom: 0.5rem; color: #007bff; }
+
+  /* ======================================================================= */
+  /* --- NEW: TECHNICAL SKILLSETS SECTION --- */
+  /* ======================================================================= */
+  .skillsets-section {
+    max-width: 900px;
+    margin: 4rem auto;
     text-align: center;
   }
-  .network-section h2 {
+  .skillsets-section h2 {
     font-size: 1.8rem;
     margin-bottom: 2rem;
   }
-  #research-network-graph {
-    width: 100%;
-    height: 450px;
-    background-color: #fdfdfd;
+  .skill-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 2rem;
+    padding: 2rem;
+    background-color: #f9f9f9;
     border-radius: 12px;
-    border: 1px solid #e9ecef;
-    cursor: grab;
+  }
+  .skill-item {
+    text-align: center;
+  }
+  .skill-item img {
+    height: 50px;
+    margin-bottom: 0.75rem;
+    transition: transform 0.3s ease;
+  }
+  .skill-item:hover img {
+    transform: scale(1.1);
+  }
+  .skill-item span {
+    font-weight: 600;
+    color: #555;
   }
 
+  /* --- Network Diagram Section --- */
+  .network-section { margin-top: 4rem; text-align: center; }
+  .network-section h2 { font-size: 1.8rem; margin-bottom: 2rem; }
+  #research-network-graph { width: 100%; height: 450px; background-color: #fdfdfd; border-radius: 12px; border: 1px solid #e9ecef; cursor: grab; }
+
   /* --- Google Scholar Link --- */
-  .scholar-link-section {
-    text-align: center;
-    margin-top: 3rem;
-    padding-top: 2rem;
-    border-top: 1px solid #e9ecef;
-  }
-  .scholar-link-section a {
-    text-decoration: none;
-    font-weight: bold;
-    color: #333;
-    transition: color 0.2s ease;
-  }
-  .scholar-link-section a:hover {
-    color: #007bff;
-  }
-  .scholar-link-section .icon {
-    font-size: 1.5rem;
-    margin-right: 8px;
-    vertical-align: middle;
-  }
+  .scholar-link-section { text-align: center; margin-top: 3rem; padding-top: 2rem; border-top: 1px solid #e9ecef; }
+  .scholar-link-section a { text-decoration: none; font-weight: bold; color: #333; transition: color 0.2s ease; }
+  .scholar-link-section a:hover { color: #007bff; }
+  .scholar-link-section .icon { font-size: 1.5rem; margin-right: 8px; vertical-align: middle; }
 
 </style>
 
-<!-- ======================================================================= -->
-<!-- KEYWORD HIGHLIGHTS -->
-<!-- ======================================================================= -->
 <div class="keyword-highlights">
   <h3>Core Research Themes</h3>
   <div class="keywords-container">
@@ -107,9 +90,6 @@ author_profile: true
 </div>
 
 
-<!-- ======================================================================= -->
-<!-- ORIGINAL PUBLICATION LIST -->
-<!-- ======================================================================= -->
 {% assign publications_by_year = site.publications | group_by_exp: "post", "post.date | date: '%Y'" | reverse %}
 
 {% for year in publications_by_year %}
@@ -119,19 +99,35 @@ author_profile: true
   {% endfor %}
 {% endfor %}
 
+<div class="skillsets-section">
+  <h2>Technical Skillsets Applied in Research</h2>
+  <div class="skill-grid">
+    <div class="skill-item">
+      <img src="https://www.svgrepo.com/show/354238/python.svg" alt="Python">
+      <span>Python</span>
+    </div>
+    <div class="skill-item">
+      <img src="{{ base_path }}/assets/images/logos/rstudio-svgrepo-com.svg" alt="R & RStudio">
+      <span>RStudio</span>
+    </div>
+    <div class="skill-item">
+      <img src="{{ base_path }}/assets/images/logos/stata-svgrepo-com.svg" alt="Stata">
+      <span>Stata</span>
+    </div>
+    <div class="skill-item">
+      <img src="https://www.svgrepo.com/show/374093/sql.svg" alt="SQL">
+      <span>SQL</span>
+    </div>
+  </div>
+</div>
 
-<!-- ======================================================================= -->
-<!-- INTERACTIVE KEYWORD NETWORK -->
-<!-- ======================================================================= -->
+
 <div class="network-section">
   <h2>Research Keyword Network</h2>
   <canvas id="research-network-graph"></canvas>
 </div>
 
 
-<!-- ======================================================================= -->
-<!-- GOOGLE SCHOLAR LINK -->
-<!-- ======================================================================= -->
 <div class="scholar-link-section">
   <a href="https://scholar.google.com/citations?user=3-AfcGcAAAAJ&hl=en" target="_blank" rel="noopener noreferrer">
     <i class="ai ai-google-scholar-square icon"></i>
@@ -140,7 +136,6 @@ author_profile: true
 </div>
 
 
-<!-- D3.js Library and Network Graph Script -->
 <script src="https://d3js.org/d3.v7.min.js"></script>
 <script>
   document.addEventListener("DOMContentLoaded", function() {
