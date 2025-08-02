@@ -99,6 +99,9 @@ author:
   # NEW SKILLZ FACTORY LINK
   skillz-factory   : "/skillz-factory/"
 
+  # CV link
+  cv               : "/cv/"
+
 
 # Reading Files
 include:

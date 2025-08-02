@@ -1,4 +1,50 @@
 /* ==========================================================================
+   ABOUT CONTENT GRID
+   ========================================================================== */
+
+.about-content-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  width: 100%;
+
+  .about-left {
+    flex: 0 0 30%;
+    max-width: 30%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    
+    img {
+      width: 180px;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 4px solid $primary-color;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+      margin-bottom: 1.5rem;
+    }
+  }
+
+  .about-right {
+    flex: 1 1 70%;
+    max-width: 70%;
+  }
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    .about-left, .about-right {
+      max-width: 100%;
+      flex: 1 1 100%;
+    }
+    .about-left {
+      align-items: center;
+      margin-bottom: 2rem;
+    }
+  }
+}
+/* ==========================================================================
    CUSTOM CSS BY ME
    ========================================================================== */
 

@@ -128,6 +128,9 @@
       {% if author.skillz-factory %}
         <li><a href="{{ author.skillz-factory | relative_url }}"><i class="fas fa-fw fa-rocket" aria-hidden="true" style="padding-right: 1.5em;"></i>SkillZ Factory</a></li>
       {% endif %}
+      {% if author.cv %}
+        <li><a href="{{ author.cv | relative_url }}"><i class="fas fa-fw fa-file-alt" aria-hidden="true" style="padding-right: 1.5em;"></i>Academic CV</a></li>
+      {% endif %}
     </ul>
   </div>
 </div>
