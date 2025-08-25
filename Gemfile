@@ -21,4 +21,5 @@ group :jekyll_plugins do
   gem "hawkins"
   # Consider adding this for faster local builds.
   # gem "jekyll-include-cache"
+  gem "webrick"
 end
